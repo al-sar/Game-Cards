@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="scripts/game.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+  <title>Игра в пары</title>
+</head>
+
+<body>
+
+  <div class="startbox">
+    <form action="index.html" class="startbox__form startbox__form_main">
+      <h1 class="startbox__title">Игра в пары!</h1>
+      <h3 class="startbox__title">Правила игры:</h3>
+      <p class="startbox__descr"></p>
+      <h3 class="startbox__title">Тип карт игры:</h3>
+      <div class="startbox__controls">
+        <input type="radio" class="startbox__radio" name="game_type" id="game1" checked>
+        <label for="game1" class="startbox__label">цифры</label>
+        <input type="radio" class="startbox__radio" name="game_type" id="game2">
+        <label for="game2" class="startbox__label">знаки</label>
+        <input type="radio" class="startbox__radio" name="game_type" id="game3">
+        <label for="game3" class="startbox__label">фото</label>
+      </div>
+      <button class="startbox__btn startbox__btn_start">Начать игру</button>
+      <button class="startbox__btn startbox__btn_settings"></button>
+    </form>
+    <form action="index.html" class="startbox__form startbox__form_settings">
+      <h2 class="startbox__title">Настройки:</h2>
+      <h3 class="startbox__title">Количество карт на поле:</h3>
+      <div class="startbox__count-cards">
+        <input type="radio" class="startbox__radio" name="count_cards" id="count_cards_16" checked>
+        <label for="count_cards_16" class="startbox__label">16</label>
+        <input type="radio" class="startbox__radio" name="count_cards" id="count_cards_12">
+        <label for="count_cards_12" class="startbox__label">12</label>
+        <input type="radio" class="startbox__radio" name="count_cards" id="count_cards_8">
+        <label for="count_cards_8" class="startbox__label">8</label>
+        <input type="radio" class="startbox__radio" name="count_cards" id="count_cards_6">
+        <label for="count_cards_6" class="startbox__label">6</label>
+        <input type="radio" class="startbox__radio" name="count_cards" id="count_cards_4">
+        <label for="count_cards_4" class="startbox__label">4</label>
+      </div>
+      <h3 class="startbox__title">Длительность игры (от&nbsp;10&nbsp;до&nbsp;180&nbsp;секунд):</h3>
+      <input type="range" class="startbox__timeset startbox__timeset_range" name="timeset_range" id="timeset_range"
+        min="10" max="180" value="60">
+      <input type="number" class="startbox__timeset startbox__timeset_number" name="timeset_number" id="timeset_number"
+        min="10" max="180" value="60">
+      <button class="startbox__btn startbox__btn_ok">OK</button>
+    </form>
+  </div>
+
+  <div class="stopbox">
+    <div class="stopbox__window">
+      <div class="stopbox__dialog stopbox__dialog_front">
+        <h3 class="stopbox__message">Ура!!! Вы выиграли!!!</h3>
+        <button class="stopbox__btn">OK</button>
+      </div>
+      <div class="stopbox__dialog stopbox__dialog_back"></div>
+    </div>
+  </div>
+
+  <header class="head">
+    <div class="head__timer">1:00</div>
+  </header>
+  <main class="main">
+    <div class="main__fild">
+      <ul class="main__cardlist">
+      </ul>
+      <input type="range" class="main__range" name="range" id="range" min="0" max="160" step="1" value="0" disabled>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__copyright">&copy; Все права защищены. SkillBox. 2021</div>
+  </footer>
+
+</body>
+
+</html>
